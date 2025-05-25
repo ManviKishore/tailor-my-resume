@@ -1,0 +1,82 @@
+{
+  "name": "MANVI KISHORE",
+  "contact_number": "+1-260-418-9090",
+  "email": "manvi.kishore07@gmail.com",
+  "linkedin": "linkedin.com/in/manvikishore",
+  "skills": {
+    "Languages": "Python, Java 17, JavaScript, SQL, ReactJS, NodeJS",
+    "Data Management & Cloud": "MySQL, NoSQL (MongoDB), Apache Hadoop (HDFS, MapReduce), Apache Spark, Apache Storm, Apache Hive (ORC/Parquet formats), AWS (EC2, S3, RDS, Redshift, EMR, Lambda), Kubernetes, Grafana",
+    "Technology and Frameworks": "Spring Boot, REST API, Maven, Microservices Architecture, Object‐Oriented Design, Express, Redux",
+    "Testing & CI/CD": "Mocha, Cypress, SonarQube, JUnit, TDD, Git, GitHub, TeamCity, Jenkins, JIRA, Agile"
+  },
+  "experience": [
+    {
+      "company": "Deutsche Bank",
+      "date": "January 2023 – July 2023",
+      "role": "Senior Software Engineer",
+      "responsibilities": [
+        "Achieved a 65% reduction in execution time by redesigning and optimizing Java based ETL microservice applying predicate pushdown, partition pruning, broadcast joins, and caching within spark cluster",
+        "Improved maintainability and readability by refactoring legacy Java codebase using SOLID principles, DTO patterns, Lombok, MapStruct, and Java Streams",
+        "Mentored junior developer and improved code quality by conducting peer code reviews and promoting TDD and clean code practices"
+      ]
+    },
+    {
+      "company": "Deutsche Bank",
+      "date": "August 2020 – December 2022",
+      "role": "Software Engineer",
+      "responsibilities": [
+        "Reduced SLA breach penalties by 25% by developing and deploying the Almanac microservice using Java 17, Spring Boot, and MongoDB",
+        "Saved multimillion‐dollar penalties by establishing the Almanac service as a core component of the regulatory data ecosystem",
+        "Enabled regulatory reporting for ingesting JSON loan data by architecting a Java‐based ETL microservice with Hadoop, Spark, Jackson, and Log4j",
+        "Improved observability by building REST APIs with Spring MVC and exposing system metrics via Prometheus and Grafana",
+        "Built Hive‐based automation to convert data to ORC format using J2EE and pySpark, saving over 7 man‐days per cycle",
+        "Created automated unit/integration test suites using Junit 5, Mockito, and Spring Test",
+        "Used Singleton and Factory design patterns to improve processing speed and code modularity",
+        "Integrated microservices into Apache Storm for real‐time resolution, supporting 15,000+ feeds",
+        "Implemented Kerberos-based auth and OAuth2 in microservice mesh"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Purdue University",
+      "degree": "MS, Computer Science",
+      "gpa": "4.0/4.0",
+      "date": "August 2023 ‐ May 2025"
+    },
+    {
+      "institution": "Motilal Nehru National Institute of Technology",
+      "degree": "BTech, Computer Science",
+      "gpa": "3.25/4.0",
+      "date": "July 2016 ‐ June 2020"
+    }
+  ],
+  "projects": [
+    {
+      "title": "AWS ETL Pipeline for HTAP Database Comparison – Thesis",
+      "date": "August 2024 ‐ April 2025",
+      "details": [
+        "Developed an AWS ETL pipeline using Redshift, RDS, EMR, and S3 to compare HTAP (TiDB) with traditional ETL methods",
+        "Created PySpark scripts to transform CSV/JSON data for Redshift ingestion via EMR cluster",
+        "Examined real‐time transactional ingestion versus conventional ETL workflows for analytical workloads",
+        "Benchmarked TPC‐H and SSB to assess query performance and schema impact"
+      ]
+    },
+    {
+      "title": "Global Gateway for Education",
+      "date": "January 2024 – May 2024",
+      "details": [
+        "Created a dynamic web platform using React.js, JavaScript, MongoDB, and Mongoose with responsive design and Redux",
+        "Developed backend services with Node.js and Express, using JWT-based auth and Redis caching",
+        "Performed unit and end-to-end testing with Mocha and Cypress",
+        "Deployed to Heroku for scalability"
+      ]
+    }
+  ],
+  "honors_and_awards": [
+    "Defended and published master's thesis, DOI: https://doi.org/10.25394/PGS.28908275.v1",
+    "Nominated for Top 50 students 2025 at Purdue University",
+    "Research paper under review at DEXA 2025 – International Conference on Database and Expert Systems Applications",
+    "Received Employee Recognition Award at Deutsche Bank, 2022"
+  ]
+}
