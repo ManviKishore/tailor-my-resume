@@ -12,7 +12,7 @@ from google import genai
 resumes_collection = get_resumes_collection()
 
 # === Gemini API Setup ===
-client = genai.Client(api_key="AIzaSyBv6R7CsUy6lPW9q7CVRqD3ViaDzT1BXu4")
+client = genai.Client(api_key="YOUR_KEY")
 # List available models to confirm free-tier support
 # print("Available Gemini models:", [m.name for m in available_models])
 # Free-tier models typically include text-bison-001 and chat-bison-001
