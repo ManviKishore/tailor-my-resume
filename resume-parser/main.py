@@ -1,13 +1,14 @@
 # resume_parser_service/main.py
 
 from flask import Flask, request, jsonify
-import os
+import os, sys
 import uuid
 import spacy
 import pika
 import json
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../utils')))
+from utils import get_resumes_collection
+
 
 # === Config === #
 app = Flask(__name__)
@@ -15,18 +16,8 @@ app = Flask(__name__)
 # === NLP Setup === #
 lp = spacy.load("en_core_web_sm")
 
-# === MongoDB Setup === #
-uri = "mongodb+srv://user_admin_sudo:useradminsudo@cluster0.xbak0ji.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-mongo_client = MongoClient(uri, server_api=ServerApi('1'))
 
-try:
-    mongo_client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
-
-db = mongo_client["tmr"]
-resumes_collection = db["tailorMyResume"]
+resumes_collection = get_resumes_collection()
 
 # === RabbitMQ Setup === #
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
