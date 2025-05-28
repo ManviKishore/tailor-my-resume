@@ -12,10 +12,7 @@ from google import genai
 resumes_collection = get_resumes_collection()
 
 # === Gemini API Setup ===
-client = genai.Client(api_key="YOUR_KEY")
-# List available models to confirm free-tier support
-# print("Available Gemini models:", [m.name for m in available_models])
-# Free-tier models typically include text-bison-001 and chat-bison-001
+client = genai.Client(api_key="api_key")
 MODEL_NAME = "gemini-2.0-flash"
 # === RabbitMQ Setup ===
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
@@ -68,8 +65,9 @@ def on_parsed(ch, method, properties, body):
         exchange='', routing_key='resume.tailored',
         body=json.dumps({'resume_id': resume_id})
     )
+    print("Resume Tailored and published to the queue")
     # Notify orchestrator
-    requests.post('http://localhost:5000/tailored-done', json={'resume_id': resume_id})
+   # requests.post('http://localhost:5000/tailored-done', json={'resume_id': resume_id})
 
 # === Start Consuming ===
 channel.basic_consume(queue='resume.parsed', on_message_callback=on_parsed, auto_ack=True)
